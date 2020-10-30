@@ -1,0 +1,130 @@
+.spider {
+    position: fixed;
+    display: inline-block;
+    top: 0;
+    left: 85%;
+    animation: swing 2s infinite;
+    transform-origin: top;
+    transition: 1s ease-in-out;
+}
+
+.spider .spiderweb {
+    width: 1px;
+    height: 150px;
+    margin-left: 23px;
+    background: rgba(255,255,255, .7);
+}
+
+.spider .body {
+    width: 50px;
+    height: 40px;
+    background: rgb(170, 4, 4);
+    position: relative;
+    border-radius: 50%;
+    box-shadow: inset 0 0 20px #a14907, 0 0 30px -4px red;
+}
+
+.spider .body .eye {
+    width: 16.5px;
+    height: 16.5px;
+    position: absolute;
+    bottom: 10px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.spider .body .eye.left {
+    left: 7px;
+}
+
+.spider .body .eye.right {
+    right: 7px;
+}
+
+.spider .body .eye:after {
+    background: #000;
+    width: 3.5px;
+    height: 3.5px;
+    content: '';
+    display: block;
+    margin: 55%;
+    border-radius: 50%;
+
+    /* 3. Animatie */
+    animation: look 8s infinite;
+}
+
+.spider .legs .leg {
+    width: 40px;
+    height: 20px;
+    margin-top: -10px;
+    border: 3px solid transparent;
+    border-top-color:rgb(170, 4, 4);
+    border-radius: 40px 40px 0 0;
+}
+
+.spider .legs {
+    position: absolute;
+    bottom: -5%;
+    z-index: -1;
+}
+
+.spider .legs.left {
+    left: -80%;
+}
+.spider .legs.right {
+    right: -60%;
+}
+
+
+.legs.left .leg:nth-child(1){
+    transform: rotate(10deg);
+    margin-left: 10px;
+}
+.legs.right .leg:nth-child(1){
+    transform: rotate(-10deg);
+    margin-left: -10px;
+}
+
+
+.legs.left .leg:nth-child(2){
+    transform: rotate(-20deg);
+    margin-left: 20px;
+}
+.legs.right .leg:nth-child(2){
+    transform: rotate(20deg);
+    margin-left: -20px;
+}
+
+
+.legs.left .leg:nth-child(3){
+    transform: rotate(-50deg);
+    margin-left: 30px;
+}
+.legs.right .leg:nth-child(3){
+    transform: rotate(50deg);
+    margin-left: -30px;
+}
+
+/* 1. Animatie */
+@keyframes look {
+    0%, 40%, 100% {
+        transform: translateX(0); 
+    }
+
+    45%, 95% {
+        transform: translateX(-110%);
+    }
+}
+
+
+/* 3. Animatie */
+@keyframes swing {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}

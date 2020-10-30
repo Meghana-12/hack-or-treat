@@ -1,0 +1,108 @@
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+#spooky {
+    width: 20%;
+    height: 20%;
+    position: fixed;
+    animation: floaty 2s infinite;
+}
+
+#spooky #body {
+    position: fixed;
+    width: 45px;
+    height: 55px;
+    margin-top: 65vh;
+    margin-left: 3vh;
+    background: #f2fbf1;
+    border-top-left-radius: 23px;
+    border-top-right-radius: 23px;
+}
+
+#spooky #body:before,
+#spooky #body:after {
+    content: '';
+    position: absolute;
+    top: 33px;
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #f2fbf1;
+    animation: floaty .8s infinite;
+}
+
+#spooky #body:before {
+    left: -4px;
+}
+
+#spooky #body:after {
+    right: -4px;
+}
+
+#spooky #body #eyess {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 23px 0 0;
+    width: 23px;
+    height: 5px;
+}
+
+#spooky #body #eyess:before,
+#spooky #body #eyess:after {
+    content: ' ';
+    display: block;
+    width: 7px;
+    height: 7px;
+    background: #252c49;
+    border-radius: 50%;
+}
+
+#spooky #body #mouth {
+    background: #252c49;
+    margin: 6px auto 0;
+    width: 15px;
+    height: 7px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+#spooky #body #mouth:before {
+    content: ' ';
+    display: block;
+    background: #fff;
+    margin-left: 5px;
+    width: 3px;
+    height: 3px;
+}
+
+#spooky #body #feet {
+    position: absolute;
+    display: flex;
+    bottom: -4px;
+    width: 45px;
+    height: 9px;
+}
+
+#spooky #body #feet > *,
+#spooky #body #feet::before,
+#spooky #body #feet::after {
+    content: ' ';
+    width: 9px;
+    height: 9px;
+    background: #f2fbf1;
+    border-radius: 50%;
+}
+
+@keyframes floaty {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
