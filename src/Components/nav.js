@@ -11,12 +11,18 @@ import Container from '@material-ui/core/Container';
 import Fab from '@material-ui/core/Fab';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import Zoom from '@material-ui/core/Zoom';
+import ButtonSpl from './button';
+import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     position: 'fixed',
     bottom: theme.spacing(2),
     right: theme.spacing(2),
+  },
+  toolbar: {
+    justifyContent: 'space-between',
+    
   },
 }));
 
@@ -59,19 +65,30 @@ ScrollTop.propTypes = {
 };
 
 export default function BackToTop(props) {
+    const classes = useStyles();
   return (
     <React.Fragment>
       <CssBaseline />
       <AppBar>
-        <Toolbar>
+        <Toolbar className={classes.toolbar}>
           <Typography  variant="body1">Scroll to see button</Typography>
+          <span>
+          <Button color="secondary" ><Typography  variant="body2" component="h2" style={{textTransform: 'none',padding:"15px"}}>Home</Typography></Button>
+          <Button color="secondary"><Typography  variant="body2" style={{textTransform: 'none',padding:"15px"}}>Gallery</Typography></Button>
+          <Button color="secondary"><Typography  variant="body2" style={{textTransform: 'none',padding:"15px"}}>Artist</Typography></Button>
+          <Button color="secondary"><Typography  variant="body2" style={{textTransform: 'none',padding:"15px"}}>Cam</Typography></Button>
+         </span>
+          
+          <ButtonSpl> Sign Up! </ButtonSpl>
+         
         </Toolbar>
+        
       </AppBar>
       <Toolbar id="back-to-top-anchor" />
       <Container>
         <Box my={2} >
         <Typography  variant="body2">
-        {props.content}
+        {props.children}
         </Typography>
         </Box>
       </Container>

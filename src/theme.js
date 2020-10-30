@@ -14,6 +14,7 @@ const theme = createMuiTheme({
         },
         body2:{
             fontFamily: 'Griffy', 
+            // fontStyle: 'cursive',
         },
   },
 //   overrides: {
@@ -26,8 +27,8 @@ const theme = createMuiTheme({
   body1: {
     fontWeight: 500,
   },
-  button: {
-    fontStyle: 'italic',
+  button: {  
+    fontStyle: 'Creepster',
   },
 })
 export default theme
