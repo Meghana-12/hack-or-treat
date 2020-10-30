@@ -75,8 +75,9 @@ export default function BackToTop(props) {
           <span>
           <Button color="secondary" ><Typography  variant="body2" component="h2" style={{textTransform: 'none',padding:"15px"}}>Home</Typography></Button>
           <Button color="secondary"><Typography  variant="body2" style={{textTransform: 'none',padding:"15px"}}>Gallery</Typography></Button>
-          <Button color="secondary"><Typography  variant="body2" style={{textTransform: 'none',padding:"15px"}}>Artist</Typography></Button>
           <Button color="secondary"><Typography  variant="body2" style={{textTransform: 'none',padding:"15px"}}>Cam</Typography></Button>
+          <Button color="secondary"><Typography  variant="body2" style={{textTransform: 'none',padding:"15px"}}>Games</Typography></Button>
+          <Button color="secondary"><Typography  variant="body2" style={{textTransform: 'none',padding:"15px"}}>Artists</Typography></Button>
          </span>
           
           <ButtonSpl> Sign Up! </ButtonSpl>

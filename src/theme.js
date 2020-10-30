@@ -16,6 +16,10 @@ const theme = createMuiTheme({
             fontFamily: 'Griffy', 
             // fontStyle: 'cursive',
         },
+        h1:{
+          fontFamily: 'Creepster',
+          // fontSize:
+        }
   },
 //   overrides: {
 //     MuiCssBaseline: {

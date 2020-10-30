@@ -4,10 +4,13 @@ import { getThemeProps } from '@material-ui/styles';
 import Box from '@material-ui/core/Box';
 import { sizing } from '@material-ui/system';
 import Grid from '@material-ui/core/Grid';
+import house from '../Images/house.png';
+import Typography from '@material-ui/core/Typography';
+
 const useStyles = makeStyles((theme) => ({
     root: {
-      width: "100vh",
-      height:"30rem",
+      width: "auto",
+      height:"45rem",
       backgroundColor:"#200236",
       overflow:"hidden",
       // margin:0,
@@ -19,21 +22,24 @@ export default function Home() {
     const classes = useStyles();
   
     return (
-        <div className={classes.root} >
-          <Grid container>
-          {/* <Box display='flex' flex='1' justifyContent='space-around'> */}
-            {/* <Container fixed="false" style={{backgroundColor:"#200236", color: "white",}}> */}
-            content={[...new Array(50)]
-          .map(
-            () => `Cras mattis consectetur purus sit amet fermentum.
-Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`,
-          )
-          .join('\n')}
-          {/* </Container> */}
-          {/* </Box> */}
+      <div className={classes.root} style={{margin:"0", padding:"0"}} >
+        <Grid 
+        container fluid 
+        direction="row" justify="space-between" alignItems="center"
+        spacing= {6}
+        style={{margin:"0", padding:"0"}}
+
+        >
+          <Grid item xs={12} sm={6} alignItems="flex-start" >
+            <img src={house}/>
           </Grid>
+          <Grid item xs={12} sm={6}  alignItems="center" >
+            <Typography variant="h1" style={{color:"#AF4B00"}}>
+              Halloween's  HERE
+              </Typography>
+          </Grid>
+            
+        </Grid>
         </div>
   );
 }
