@@ -38,14 +38,19 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Login() {
-  const classes = useStyles(theme);
+  const classes = useStyles();
   const { register, handleSubmit } = useForm();
 
   return (
     <ThemeProvider theme={theme}>
-      <Container className={classes.container} component="main" maxWidth="xs">
+      <Container
+        className={classes.container}
+        component="main"
+        maxWidth="xs"
+        style={{ backgroundColor: "white !important" }}
+      >
         <CssBaseline />
-        <div className={classes.paper}>
+        <div className={classes.paper} style={{ backgroundColor: "white" }}>
           <Avatar className={classes.avatar}>
             <LockOutlinedIcon />
           </Avatar>
