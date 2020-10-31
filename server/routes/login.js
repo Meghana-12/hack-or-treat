@@ -1,7 +1,9 @@
 const express = require('express')
 const router = express.Router();
 
-const login = require('./login');
-router.use("/login", login);
+router.get('/', async (req,res) => {
+    res.send('hello world');
+});
+
 
 module.exports = router;
