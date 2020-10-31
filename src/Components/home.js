@@ -9,12 +9,12 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-      width: "auto",
+      // width: "auto",
       height:"45rem",
       backgroundColor:"#200236",
       overflow:"hidden",
-      // margin:0,
-      // left:0,
+      margin:0,
+      top:0,
     },
   }));
 
@@ -22,18 +22,23 @@ export default function Home() {
     const classes = useStyles();
   
     return (
-      <div className={classes.root} style={{margin:"0", padding:"0"}} >
+      <div className={classes.root} style={{margin:0, padding:0}} >
         <Grid 
-        container fluid 
-        direction="row" justify="space-between" alignItems="center"
-        spacing= {6}
-        style={{margin:"0", padding:"0"}}
-
+        container 
+        // fluid 
+        // direction="row" 
+        justify="space-between" 
+        alignItems="center"
+        // spacing= {6}
+        // style={{margin:"0", padding:"0"}}
+        wrap="wrap"
         >
-          <Grid item xs={12} sm={6} alignItems="flex-start" >
+          <Grid item xs={12} sm={6}  >
+            <div>
             <img src={house}/>
+            </div>
           </Grid>
-          <Grid item xs={12} sm={6}  alignItems="center" >
+          <Grid item xs={12} sm={6}  >
             <Typography variant="h1" style={{color:"#AF4B00"}}>
               Halloween's  HERE
               </Typography>

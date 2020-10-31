@@ -7,6 +7,9 @@ import Container from "@material-ui/core/Container";
 import { ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Home from "./Components/home";
+import Artists from './Components/artists';
+import MusicNTexts from './Components/cam';
+
 import theme from "./theme";
 const Layout = () => {
   return (
@@ -18,6 +21,8 @@ const Layout = () => {
         <CssBaseline />
         <Nav />
         <Home />
+        <Artists/>
+        <MusicNTexts/>
       </ThemeProvider>
     </Container>
   );
