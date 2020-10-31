@@ -18,9 +18,8 @@ function App() {
       <Pumpkin />
     <ThemeProvider theme={theme}>
     <CssBaseline />
-    <Nav >
+    <Nav />
          <Home/>
-      </Nav>
        
   </ThemeProvider>
   </Container>
