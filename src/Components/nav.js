@@ -13,6 +13,9 @@ import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import Zoom from '@material-ui/core/Zoom';
 import ButtonSpl from './button';
 import Button from '@material-ui/core/Button';
+import Music from './MusicPlayer/music.js';
+import Grid from '@material-ui/core/Grid';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -79,8 +82,10 @@ export default function BackToTop(props) {
           <Button color="secondary"><Typography  variant="body2" style={{textTransform: 'none',padding:"15px"}}>Games</Typography></Button>
           <Button color="secondary"><Typography  variant="body2" style={{textTransform: 'none',padding:"15px"}}>Artists</Typography></Button>
          </span>
-          
-          <ButtonSpl> Sign Up! </ButtonSpl>
+          <Grid style={{display:"flex"}}>
+            <span> <Music/></span>
+          <span> <ButtonSpl> Sign Up! </ButtonSpl></span>
+          </Grid>
          
         </Toolbar>
         

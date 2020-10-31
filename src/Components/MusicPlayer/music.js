@@ -1,14 +1,24 @@
 import React, { Component } from 'react';
 import AudioPlayer from 'react-playlist-player';
 import './style.css';
+import { IconButton } from '@material-ui/core';
+import MusicNoteIcon from '@material-ui/icons/MusicNote';
+import {MusicOff} from '@material-ui/icons';
 
+// const[ on, setOn] = React.setState(false) ;
 class MusicPlayer extends Component {
     state = {
-      currentPlayList: {}
+      currentPlayList: {},
+      on: false,
     }
-  
+    // musicOnOff = () =>
+    //   this.setState({
+    //     on:!on
+    //   })
+
     loadPlayList = () =>
       this.setState({
+        // on :true,
         currentPlayList: {
           playlistCoverUrl:
             'https://static.vecteezy.com/system/resources/thumbnails/000/133/319/small_2x/haunted-house-halloween-background.jpg',
@@ -37,15 +47,22 @@ class MusicPlayer extends Component {
           type: 'album'
         }
       })
-  
+    // componentDidUpdate(){
+
+    //   }
     render() {
       return (
-        <div>
-          <button className="demo-button" onClick={this.loadPlayList}>
+        <React.Fragment>
+          {/* <button className="demo-button" >
             Load playlist
-          </button>
+          </button> */}
+          <IconButton style={{marginRight:"10px"}} onClick={this.loadPlayList }>
+        {/* {this.on === true ?  */}
+        <MusicNoteIcon color="secondary"/> 
+        {/* // : <MusicOff color="secondary"/>} */}
+          </IconButton>
           <AudioPlayer currentPlayList={this.state.currentPlayList} onToggle={({audioPlaying}) => console.log({audioPlaying})}/>
-        </div>
+        </React.Fragment>
       )
     }
   }
