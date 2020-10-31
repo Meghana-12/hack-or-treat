@@ -1,0 +1,13 @@
+.demo-button {
+    outline: none;
+    cursor: pointer;
+    position: fixed;
+    top: 12%;
+    transform: translate(-50%, -50%);
+    left: 93%;
+    background-color: purple;
+    color: white;
+    padding: 0.5rem 0.8rem;
+    border-radius: 1rem;
+    border: 1px solid black;
+}
