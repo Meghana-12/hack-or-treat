@@ -2,8 +2,8 @@ import "./App.css";
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import Layout from "./layout";
-import Signup from "./Components/signup";
-import Login from "./Components/login";
+import Signup from "./Components/Signup/signup";
+import Login from "./Components/Login/login";
 const App = () => {
   return (
     <Switch>
