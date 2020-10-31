@@ -16,9 +16,8 @@ const Layout = () => {
       <Pumpkin />
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Nav>
-          <Home />
-        </Nav>
+        <Nav />
+        <Home />
       </ThemeProvider>
     </Container>
   );

@@ -5,11 +5,9 @@ import Layout from "./layout";
 
 const App = () => {
   return (
-    <>
-      <Switch>
-        <Route path="/" component={Layout} />
-      </Switch>
-    </>
+    <Switch>
+      <Route path="/" component={Layout} />
+    </Switch>
   );
 };
 
