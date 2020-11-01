@@ -11,6 +11,7 @@ import { ThemeProvider } from "@material-ui/core/styles";
 import theme from "../../theme";
 import Container from "@material-ui/core/Container";
 import { useForm } from "react-hook-form";
+import axios from "axios";
 import "./signup.css";
 
 const useStyles = makeStyles((theme) => ({
@@ -38,6 +39,21 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const handleSignup = (data) => {
+  axios
+    .post("/signup", {
+      username: data.username,
+      email: data.email,
+      password: data.password,
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+};
+
 export default function SignUp() {
   const classes = useStyles(theme);
   const { register, handleSubmit } = useForm();
@@ -54,19 +70,19 @@ export default function SignUp() {
             <form
               className={classes.form}
               noValidate
-              onSubmit={handleSubmit((data) => alert(JSON.stringify(data)))}
+              onSubmit={handleSubmit(handleSignup)}
             >
               <Grid container spacing={2}>
                 <Grid item xs={12} sm={6}>
                   <TextField
-                    autoComplete="fname"
-                    name="firstName"
+                    autoComplete="email"
+                    name="email"
                     inputRef={register}
                     variant="outlined"
                     required
                     fullWidth
-                    id="firstName"
-                    label="First Name"
+                    id="email"
+                    label="Email"
                     autoFocus
                   />
                 </Grid>
@@ -75,11 +91,11 @@ export default function SignUp() {
                     variant="outlined"
                     required
                     fullWidth
-                    id="lastName"
-                    label="Last Name"
-                    name="lastName"
+                    id="username"
+                    label="username"
+                    name="username"
                     inputRef={register}
-                    autoComplete="lname"
+                    autoComplete="username"
                   />
                 </Grid>
                 <Grid item xs={12}>

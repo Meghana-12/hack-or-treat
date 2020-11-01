@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -11,6 +11,8 @@ import { ThemeProvider } from "@material-ui/core/styles";
 import theme from "../../theme";
 import Container from "@material-ui/core/Container";
 import { useForm } from "react-hook-form";
+import axios from "axios";
+import { useHistory } from "react-router";
 import "./login.css";
 
 const useStyles = makeStyles((theme) => ({
@@ -40,7 +42,32 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Login() {
   const classes = useStyles(theme);
+  const [login, setLogin] = useState(true);
   const { register, handleSubmit } = useForm();
+  const history = useHistory();
+
+  const handleLogin = async (data) => {
+    const result = await axios.post("/login", {
+      username: data.username,
+      email: data.email,
+      password: data.password,
+    });
+
+    console.log(result);
+    if (result.data.message === "good") {
+      history.push("/");
+    } else {
+      setLogin(false);
+    }
+  };
+
+  console.log("value of login is" + login);
+
+  let errorMessage = (
+    <div>
+      <p style={{ color: "red" }}>Please try again</p>
+    </div>
+  );
 
   return (
     <div className="login-div">
@@ -54,19 +81,19 @@ export default function Login() {
             <form
               className={classes.form}
               noValidate
-              onSubmit={handleSubmit((data) => alert(JSON.stringify(data)))}
+              onSubmit={handleSubmit(handleLogin)}
             >
               <Grid container spacing={2}>
                 <Grid item xs={12} sm={6}>
                   <TextField
-                    autoComplete="fname"
-                    name="firstName"
+                    autoComplete="email"
+                    name="email"
                     inputRef={register}
                     variant="outlined"
                     required
                     fullWidth
-                    id="firstName"
-                    label="First Name"
+                    id="email"
+                    label="Email"
                     autoFocus
                   />
                 </Grid>
@@ -75,11 +102,11 @@ export default function Login() {
                     variant="outlined"
                     required
                     fullWidth
-                    id="lastName"
-                    label="Last Name"
-                    name="lastName"
+                    id="username"
+                    label="username"
+                    name="username"
                     inputRef={register}
-                    autoComplete="lname"
+                    autoComplete="username"
                   />
                 </Grid>
                 <Grid item xs={12}>
@@ -104,7 +131,10 @@ export default function Login() {
                 className={classes.submit}
               >
                 Login
-              </Button>
+              </Button>{" "}
+              <Grid container justify="flex-end">
+                <Grid item>{!login && errorMessage}</Grid>
+              </Grid>
               <Grid container justify="flex-end">
                 <Grid item>
                   <Link href="/signup" variant="body2">
