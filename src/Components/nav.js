@@ -84,7 +84,7 @@ export default function BackToTop(props) {
       <CssBaseline />
       <AppBar>
         <Toolbar className={classes.toolbar}>
-          <Typography variant="body1">Halloween!</Typography>
+          <Typography variant="body1">Halloween's Here!</Typography>
           <span>
             <Button color="secondary">
               <Typography

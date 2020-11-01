@@ -2,7 +2,8 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Card from './card.js';
 import { makeStyles } from '@material-ui/core/styles';
-import bg1 from '../Images/bg1.jpg';
+// import bg1 from '../Images/bg1.jpg';
+import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -18,7 +19,12 @@ const useStyles = makeStyles((theme) => ({
 export default function Artists(){
     const classes = useStyles();
   return(
-    <div className={classes.root} style={{backgroundImage:{bg1}}}>
+    <div className={classes.root} 
+    // style={{backgroundImage:{bg1}}}
+    >
+      <div style={{display:"flex", justifyContent:"center", margin:"5rem"}}>
+        <Typography variant="h1" color= "secondary"> Artists </Typography>
+      </div>
     <Grid container justify="center" wrap="wrap" style={{overflow:"hidden"}}>
       {/* <Grid item xs={3}> */}
       <div>

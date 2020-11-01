@@ -110,7 +110,9 @@ export default function WebApp() {
         // className={classes.root}
         // >
         <div className={classes.root}>
+          <div style={{display:"flex", justifyContent:"center", margin:"5rem"}}>
           <Typography variant="h1" color="secondary"> Spooky Cam</Typography>
+          </div>
           <video id="camera-stream"></video>
           <canvas id="hidden-canvas"></canvas>
           <canvas id="output-canvas"></canvas>
