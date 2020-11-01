@@ -1,10 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Spinner from './spinner'
-
-const Title = styled.h1`
-  font-size: 35px;
-`
+import Typography from '@material-ui/core/Typography';
 
 const Buttons = styled.div`
   margin: 10px auto;
@@ -13,8 +10,10 @@ const Buttons = styled.div`
 const Button = styled.button`
   font-size: 20px;
   margin: 0 10px;
+  background: '#AF4B00',
   padding: 10px;
   color: "#AF4B00";
+  boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
 `
 
 class SlotMachine extends React.Component {
@@ -54,11 +53,11 @@ class SlotMachine extends React.Component {
 
     return (
       <React.Fragment>
-        <Title>Halloween Slot Machine</Title>
+        <Typography>Halloween Slot Machine</Typography>
         <Spinner spin={isRunning} />
         <Buttons>
-          <Button onClick={this.handleStart} disabled={isRunning}>Start</Button>
-          <Button onClick={this.handleStop} disabled={!isRunning}>Stop</Button>
+          <Button style={{background: '#AF4B00', border: "none", color: "white"}} onClick={this.handleStart} disabled={isRunning}>Start</Button>
+          <Button style={{background: '#AF4B00', border: "none", color: "white"}} onClick={this.handleStop} disabled={!isRunning}>Stop</Button>
         </Buttons>
       </React.Fragment>
     )

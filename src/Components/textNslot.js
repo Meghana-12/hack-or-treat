@@ -4,7 +4,8 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import SlotMachine from './SlotMachine/slot';
 import Button from '@material-ui/core/Button';
-import {quotes} from './Spookytext/text'
+import {quotes} from './Spookytext/text';
+import { GiSpiderWeb } from 'react-icons/gi';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -35,7 +36,8 @@ export default function TextNSlot() {
     return (
       <div className={classes.root}>
         <div style={{alignContent:"center"}}>
-        <Typography variant="h1" color= "secondary"> Trick or Treat ?</Typography>
+        <Typography variant="h1" color= "secondary"> Trick or Treat ?
+        <GiSpiderWeb style={{marginLeft: "15px"}} color="orange"/></Typography>
         </div>
         <Grid container spacing={3} style={{alignItems:"baseline"}}>
             

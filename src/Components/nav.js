@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     position: "fixed",
     bottom: theme.spacing(2),
     right: theme.spacing(2),
-    overflow: "none",
+    overflow: "hidden",
   },
   toolbar: {
     justifyContent: "space-between",
@@ -31,9 +31,6 @@ const useStyles = makeStyles((theme) => ({
     posiiton: "fixed",
     bottom: theme.spacing(2),
     right: theme.spacing(2),
-  },
-  music : {
-    overflow:"hidden",
   }
 }));
 
@@ -84,7 +81,7 @@ export default function BackToTop(props) {
       <CssBaseline />
       <AppBar>
         <Toolbar className={classes.toolbar}>
-          <Typography variant="body1">Halloween!</Typography>
+          <Typography variant="body1">Scroll to see button</Typography>
           <span>
             <Button color="secondary">
               <Typography
@@ -111,7 +108,6 @@ export default function BackToTop(props) {
                 Cam
               </Typography>
             </Button>
-            <Link to="/games">
             <Button color="secondary">
               <Typography
                 variant="body2"
@@ -120,7 +116,6 @@ export default function BackToTop(props) {
                 Games
               </Typography>
             </Button>
-            </Link>
             <Button color="secondary">
               <Typography
                 variant="body2"
@@ -130,9 +125,9 @@ export default function BackToTop(props) {
               </Typography>
             </Button>
           </span>
-          <Grid className={classes.music} style={{display:"flex"}}>
-            <div> <Music/></div>
-          <div> <ButtonSpl> Sign Up! </ButtonSpl></div>
+          <Grid style={{display:"flex"}}>
+            <span> <Music/></span>
+          <span> <ButtonSpl> Sign Up! </ButtonSpl></span>
           </Grid>
         </Toolbar>
       </AppBar>
