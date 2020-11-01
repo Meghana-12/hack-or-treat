@@ -22,7 +22,9 @@ const Layout = () => {
         <CssBaseline />
         <Nav />
         <Home />
+        <div style={{display:"flex", justifyContent:"center"}}>
         <WebApp />
+        </div>
         <TextNSlot/>
         <Artists />
       </ThemeProvider>

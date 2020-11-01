@@ -1,7 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import './style.css';
-import Grid from '@material-ui/core/Grid';
+import {Typography} from '@material-ui/core';
+
 const useStyles = makeStyles((theme) => ({
     root: {
       // // width: "auto",
@@ -9,6 +10,7 @@ const useStyles = makeStyles((theme) => ({
       // backgroundColor:"#200236",
       // overflow:"hidden",
       padding:"auto",
+      alignSelf: "center",
       // top:0,
     },
   }));
@@ -79,6 +81,7 @@ export default function WebApp() {
               const randomCharacter = charset[Math.floor(Math.random() * charset.length)];
 
               outputContext.fillStyle = `rgb(${r},${g},${b})`;
+              // outputContext.fillStyle = "rgb(187,68,0)";
               // outputContext.fillRect(x, y, fontWidth, fontHeight);
               outputContext.fillText(randomCharacter, x, y);
             }
@@ -102,16 +105,17 @@ export default function WebApp() {
     });
 
     return (
-        <Grid
-        justify="space-around"
-        className={classes.root}
-        >
-        <div>
+        // <Grid
+        // justify="space-around"
+        // className={classes.root}
+        // >
+        <div className={classes.root}>
+          <Typography variant="h1" color="secondary"> Spooky Cam</Typography>
           <video id="camera-stream"></video>
           <canvas id="hidden-canvas"></canvas>
           <canvas id="output-canvas"></canvas>
         </div>
-        {/* <script src="./script.js"></script> */}
-        </Grid>
+        // {/* <script src="./script.js"></script> */}
+        // </Grid>
     )
 }
