@@ -24,7 +24,7 @@ export default function Artists(){
       <div>
         <Card
         name = "Meghana Varanasi"
-        img= "https://ca.slack-edge.com/T01B9HM9QE4-U01D6G1D47N-928656d6c1e7-512"
+        img= "https://firebasestorage.googleapis.com/v0/b/hack-or-treat-e41fc.appspot.com/o/meghana.png?alt=media&token=9fd7b67c-e68e-4b23-b469-58d42467ae3f"
         github="https://github.com/Meghana-12"
         linkedin="https://www.linkedin.com/in/varanasi-meghana-1671b1192/"
         />
@@ -34,7 +34,7 @@ export default function Artists(){
       <div style={{paddingTop:"40px"}}>
         <Card
         name = "Prahitha Movva"
-        img= ""
+        img= "https://firebasestorage.googleapis.com/v0/b/hack-or-treat-e41fc.appspot.com/o/prahitha.png?alt=media&token=e43278b1-1cdc-447c-ad95-3ba5dcfd47f1"
         github=""
         linkedin=""
         />
@@ -44,7 +44,7 @@ export default function Artists(){
       <div >
       <Card
         name = "Shreya Gundu"
-        img= ""
+        img= "https://firebasestorage.googleapis.com/v0/b/hack-or-treat-e41fc.appspot.com/o/shreya.png?alt=media&token=2efb5dfb-3a00-4607-a6b2-fc45cc18e8c2"
         github=""
         linkedin=""
         />
@@ -54,7 +54,7 @@ export default function Artists(){
       <div style={{paddingTop:"40px"}}>
       <Card
         name = "Michael Yoger"
-        img= ""
+        img= "https://firebasestorage.googleapis.com/v0/b/hack-or-treat-e41fc.appspot.com/o/michael.png?alt=media&token=bd63c3ac-6cd6-40d1-8392-91e99998507a"
         github=""
         linkedin=""
         />

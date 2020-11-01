@@ -22,10 +22,16 @@ const useStyles = makeStyles((theme) => ({
     position: "fixed",
     bottom: theme.spacing(2),
     right: theme.spacing(2),
+    overflow: "hidden",
   },
   toolbar: {
     justifyContent: "space-between",
   },
+  toTop: {
+    posiiton: "fixed",
+    bottom: theme.spacing(2),
+    right: theme.spacing(2),
+  }
 }));
 
 function ScrollTop(props) {
@@ -119,9 +125,10 @@ export default function BackToTop(props) {
               </Typography>
             </Button>
           </span>
-          <Link to="/signup">
-            <ButtonSpl> Sign Up! </ButtonSpl>
-          </Link>
+          <Grid style={{display:"flex"}}>
+            <span> <Music/></span>
+          <span> <ButtonSpl> Sign Up! </ButtonSpl></span>
+          </Grid>
         </Toolbar>
       </AppBar>
       <Toolbar id="back-to-top-anchor" />
@@ -131,7 +138,7 @@ export default function BackToTop(props) {
         </Box>
       </Container>
       <ScrollTop {...props}>
-        <Fab color="secondary" size="small" aria-label="scroll back to top">
+        <Fab color="secondary" size="small" aria-label="scroll back to top" className={classes.toTop}>
           <KeyboardArrowUpIcon />
         </Fab>
       </ScrollTop>
