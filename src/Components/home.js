@@ -38,7 +38,7 @@ export default function Home() {
           </Grid>
           <Grid item xs={12} sm={6}  >
             <Typography variant="h1" style={{color:"#AF4B00"}}>
-              Halloween's  HERE
+             Spooky Shack
               </Typography>
           </Grid>
             

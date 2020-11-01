@@ -8,19 +8,21 @@ import {quotes} from './Spookytext/text'
 
 const useStyles = makeStyles((theme) => ({
     root: {
-      // width: "50%",
-      display : "flex",
-      flexWrap : "wrap",
-      justifyContent: "space-around",
-      alignItems: "center",
+      // width: "100vw",
+      // display : "flex",
+      // flexWrap : "wrap",
+      // justifyContent: "center",
+      // alignItems: "center",
+      // margin: 10,
+      padding: 70,
     },
     slot : {
-      flexGrow: 1,
-      alignContent: "center",
+      // flexGrow: 1,
+      // alignContent: "center",
     },
     texts : {
-      flexGrow: 1,
-      alignContent: "center",
+      // flexGrow: 1,
+      // alignContent: "center",
     }
   }));
 function genQuote() {
@@ -31,30 +33,30 @@ export default function TextNSlot() {
     const classes = useStyles();
     const [text, setText] = React.useState(genQuote())
     return (
-      <div className={classes.root} style={{margin:0, padding:0}} >
-        <Grid 
-        container  
-        justify="space-around" 
-        alignItems="center"
-        wrap="wrap"
-        >
-            <Grid item className={classes.slot}>
-                <SlotMachine/>
-            </Grid>
-            <Grid item class>
+      <div className={classes.root}>
+        <div style={{alignContent:"center"}}>
+        <Typography variant="h1" color= "secondary"> Trick or Treat ?</Typography>
+        </div>
+        <Grid container spacing={3} style={{alignItems:"baseline"}}>
+            
+            <Grid item xs={6}>
               <div>
-            <Typography variant="body2" className={classes.texts}>
-                {text}
-            </Typography>
-            </div>
-            <div>
-            <Button color="secondary" onClick={()=> {
-                    var randNum = Math.floor(Math.random() * 8) + 1;
-                    setText(quotes[randNum])
-                  }}>More</Button>
-            </div>
+                <Typography variant="body2" className={classes.texts}>
+                    {text}
+                </Typography>
+              </div>
+              <div>
+                <Button color="secondary" onClick={()=> {
+                      var randNum = Math.floor(Math.random() * 8) + 1;
+                      setText(quotes[randNum])
+                    }}>More</Button>
+              </div>
             </Grid>
-            </Grid>        
+
+            <Grid item xs={6}>
+              <div className={classes.slot}><SlotMachine/></div>
+            </Grid>   
+          </Grid>   
         </div>
         );
       }
