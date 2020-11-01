@@ -9,12 +9,10 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-      // width: "auto",
+      width: "100vw",
       height:"45rem",
       backgroundColor:"#200236",
       overflow:"hidden",
-      margin:0,
-      top:0,
     },
   }));
 

@@ -3,7 +3,6 @@ import Grid from '@material-ui/core/Grid';
 import Card from './card.js';
 import { makeStyles } from '@material-ui/core/styles';
 import bg1 from '../Images/bg1.jpg';
-import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -20,9 +19,6 @@ export default function Artists(){
     const classes = useStyles();
   return(
     <div className={classes.root} style={{backgroundImage:{bg1}}}>
-      <Grid style={{margin:"5rem 40%"}}>
-      <Typography variant= "h1" color="secondary">Artists</Typography>
-      </Grid>  
     <Grid container justify="center" wrap="wrap" style={{overflow:"hidden"}}>
       {/* <Grid item xs={3}> */}
       <div>
@@ -39,8 +35,8 @@ export default function Artists(){
         <Card
         name = "Prahitha Movva"
         img= "https://firebasestorage.googleapis.com/v0/b/hack-or-treat-e41fc.appspot.com/o/prahitha.png?alt=media&token=e43278b1-1cdc-447c-ad95-3ba5dcfd47f1"
-        github=""
-        linkedin=""
+        github="https://github.com/Prahitha"
+        linkedin="https://www.linkedin.com/in/prahitha-movva/"
         />
         </div>
       {/* </Grid>    */}

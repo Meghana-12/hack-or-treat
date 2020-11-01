@@ -53,7 +53,7 @@ class SlotMachine extends React.Component {
 
     return (
       <React.Fragment>
-        <Title>React Slot Machine</Title>
+        <Title>Halloween Slot Machine</Title>
         <Spinner spin={isRunning} />
         <Buttons>
           <Button onClick={this.handleStart} disabled={isRunning}>Start</Button>
