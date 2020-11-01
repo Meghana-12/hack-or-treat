@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 
 import Wheel from './wheel'
 
-import strawberry from '../../Images/strawberry.png';
-import banana from '../../Images/banana.png'
-import orange from '../../Images/orange.png'
-import monkey from '../../Images/monkey.png'
+import bat from '../../Images/bat.jpg';
+import ghost from '../../Images/ghost.jpg'
+import pumpkin from '../../Images/pumpkin.jpg'
+import rip from '../../Images/rip.jpg'
 
 class Spinner extends React.Component {
 
@@ -20,7 +20,7 @@ class Spinner extends React.Component {
     wheels: [],
   }
 
-  images = [strawberry, banana, orange, monkey]
+  images = [bat, ghost, pumpkin, rip]
 
   componentDidMount() {
     this.setState({
