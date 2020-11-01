@@ -100,18 +100,9 @@ export default function BackToTop(props) {
                 variant="body2"
                 style={{ textTransform: "none", padding: "15px" }}
               >
-                Gallery
-              </Typography>
-            </Button>
-            <Button color="secondary">
-              <Typography
-                variant="body2"
-                style={{ textTransform: "none", padding: "15px" }}
-              >
                 Cam
               </Typography>
             </Button>
-            <Link to="/games">
             <Button color="secondary">
               <Typography
                 variant="body2"
@@ -120,7 +111,6 @@ export default function BackToTop(props) {
                 Games
               </Typography>
             </Button>
-            </Link>
             <Button color="secondary">
               <Typography
                 variant="body2"
