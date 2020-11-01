@@ -51,8 +51,8 @@ export default function Artists(){
       <Card
         name = "Shreya Gundu"
         img= "https://firebasestorage.googleapis.com/v0/b/hack-or-treat-e41fc.appspot.com/o/shreya.png?alt=media&token=2efb5dfb-3a00-4607-a6b2-fc45cc18e8c2"
-        github=""
-        linkedin=""
+        github="https://github.com/Shreyagundu"
+        linkedin="https://www.linkedin.com/in/shreya-gundu-645409183/"
         />
         </div>
       {/* </Grid> */}
@@ -61,8 +61,8 @@ export default function Artists(){
       <Card
         name = "Michael Yoger"
         img= "https://firebasestorage.googleapis.com/v0/b/hack-or-treat-e41fc.appspot.com/o/michael.png?alt=media&token=bd63c3ac-6cd6-40d1-8392-91e99998507a"
-        github=""
-        linkedin=""
+        github="https://github.com/MichaelYogar"
+        linkedin="https://www.linkedin.com/in/michaelyogar/"
         />
         </div>
       {/* </Grid> */}
