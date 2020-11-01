@@ -21,13 +21,8 @@ const theme = createMuiTheme({
       // fontSize:
     },
   },
-  //   overrides: {
-  //     MuiCssBaseline: {
-  //       '@global': {
-  //         '@font-face': [raleway],
-  //       },
-  //     },
-  //   },
+  margin : "0",
+  padding: "0",
   body1: {
     fontWeight: 500,
   },

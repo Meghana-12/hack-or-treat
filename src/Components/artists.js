@@ -3,6 +3,7 @@ import Grid from '@material-ui/core/Grid';
 import Card from './card.js';
 import { makeStyles } from '@material-ui/core/styles';
 import bg1 from '../Images/bg1.jpg';
+import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -19,6 +20,9 @@ export default function Artists(){
     const classes = useStyles();
   return(
     <div className={classes.root} style={{backgroundImage:{bg1}}}>
+      <Grid style={{margin:"5rem 40%"}}>
+      <Typography variant= "h1" color="secondary">Artists</Typography>
+      </Grid>  
     <Grid container justify="center" wrap="wrap" style={{overflow:"hidden"}}>
       {/* <Grid item xs={3}> */}
       <div>

@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     position: "fixed",
     bottom: theme.spacing(2),
     right: theme.spacing(2),
-    overflow: "hidden",
+    overflow: "none",
   },
   toolbar: {
     justifyContent: "space-between",
@@ -31,6 +31,9 @@ const useStyles = makeStyles((theme) => ({
     posiiton: "fixed",
     bottom: theme.spacing(2),
     right: theme.spacing(2),
+  },
+  music : {
+    overflow:"hidden",
   }
 }));
 
@@ -125,9 +128,9 @@ export default function BackToTop(props) {
               </Typography>
             </Button>
           </span>
-          <Grid style={{display:"flex"}}>
-            <span> <Music/></span>
-          <span> <ButtonSpl> Sign Up! </ButtonSpl></span>
+          <Grid className={classes.music} style={{display:"flex"}}>
+            <div> <Music/></div>
+          <div> <ButtonSpl> Sign Up! </ButtonSpl></div>
           </Grid>
         </Toolbar>
       </AppBar>

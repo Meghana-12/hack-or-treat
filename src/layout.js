@@ -8,25 +8,23 @@ import { ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Home from "./Components/home";
 import Artists from './Components/artists';
-import MusicNTexts from './Components/cam';
-// import SlotMachine from './Components/SlotMachine/slot';
 import WebApp from './Components/WebCam/webApp';
 import theme from "./theme";
+import TextNSlot from './Components/textNslot';
 
 const Layout = () => {
   return (
     <Container fluid style={{ margin: "0", padding: "0" }} maxWidth="xl">
+      <ThemeProvider theme={theme}>
       <Spider />
-      {/* <SlotMachine style={{marginBottom: "20px"}}/> */}
       <Ghost />
       <Pumpkin />
-      <ThemeProvider theme={theme}>
         <CssBaseline />
         <Nav />
         <Home />
         <WebApp />
+        <TextNSlot/>
         <Artists />
-        <MusicNTexts/>
       </ThemeProvider>
     </Container>
   );
