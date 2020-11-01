@@ -108,6 +108,7 @@ export default function BackToTop(props) {
                 Cam
               </Typography>
             </Button>
+            <Link to="/games">
             <Button color="secondary">
               <Typography
                 variant="body2"
@@ -116,6 +117,7 @@ export default function BackToTop(props) {
                 Games
               </Typography>
             </Button>
+            </Link>
             <Button color="secondary">
               <Typography
                 variant="body2"
